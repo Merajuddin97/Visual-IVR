@@ -1,0 +1,103 @@
+extends layout
+
+block content
+
+
+
+  .header
+    img(src='/images/SquareTrade.png' alt='SquareTrade' width='100' height='100' style='margin-right: 1220px; margin-top: -35px;')
+    h5(style='margin-top: -65px;') SQT VISUAL IVR
+
+  .col-5.mx-auto.mt-5
+    .input-group.mb-3
+      select#intents.custom-select.select2(name='intents')
+        option(value='') Choose any Intent
+        option#Registration(data-val='reg' value='Registration') Registration
+        option#Activation(data-val='activation' value='Activation') Activation
+        option(data-val='file' value='File a New Claim') File a New Claim
+        option(data-val='claim' value='Complete an Online Claim') Complete an Online Claim
+        option(data-val='follow' value='Follow up on an Existing Claim') Follow up on an Existing Claim
+        option(data-val='anything' value='Anything Else') Anything Else
+  
+  .col-5.mx-auto
+    .input-group.mb-3
+      select#retailers.custom-select(name='retailers')
+        option(value='') Choose any Retailers
+        option(data-val='walmart' value='Walmart') Walmart
+        option(data-val='costco' value='Costco') Costco
+        option(data-val='samsclub' value='Samsclub') Samsclub
+        option(data-val='Target' value='Target') Target
+        option(data-val='Amazon' value='Amazon') Amazon
+        option(data-val='eBay' value='eBay') eBay
+        option(data-val='Consumer Cellular' value='Consumer Cellular') Consumer Cellular
+        option(data-val='Office Max' value='Office Max') Office Max
+        option(data-val='HSN' value='HSN') HSN
+        option(data-val='QVC' value='QVC') QVC
+        option(data-val='Wayfair' value='Wayfair') Wayfair
+        option(data-val='NFM' value='NFM') NFM
+        option(data-val='Bose' value='Bose') Bose
+        option(data-val='Office Depot' value='Office Depot') Office Depot
+        option(data-val='Fitbit' value='Fitbit') Fitbit
+        option(data-val='Toys R us' value='Toys R us') Toys R us
+        option(data-val='HomeDepot' value='HomeDepot') HomeDepot
+        option(data-val='B and H' value='B and H') B and H
+        option(data-val='Purchasing Power' value='Purchasing Power') Purchasing Power
+        option(data-val='Staples' value='Staples') Staples
+        option(data-val='SquareTrade' value='SquareTrade') SquareTrade
+        option(data-val='Menards' value='Menards') Menards
+        option(data-val='Cellcom' value='Cellcom') Cellcom
+        option(data-val='Allstate' value='Allstate') Allstate
+        option(data-val='JB Hifi' value='JB Hifi') JB Hifi
+        option(data-val='Exchange Mobile Center' value='Exchange Mobile Center') Exchange Mobile Center
+        option(data-val='ABT Electronics' value='ABT Electronics') ABT Electronics
+        option(data-val='AJ Madison' value='AJ Madison')
+        option(data-val='American Home Shield' value='American Home Shield') American Home Shield
+        option(data-val='Beach Camera' value='Beach Camera') Beach Camera
+        option(data-val='Big Lots' value='Big Lots') Big Lots
+        option(data-val='Blink' value='Blink') Blink
+        option(data-val='Brandsource' value='Brandsource') Brandsource
+        option(data-val='BuyDig' value='BuyDig') BuyDig
+        option(data-val='CompSource' value='CompSource') CompSource
+        option(data-val='Cornerstone' value='Cornerstone') Cornerstone
+        option(data-val='Crutchfield' value='Crutchfield') Crutchfield
+        option(data-val='East Coast Appliance' value='East Coast Appliance') East Coast Appliance
+        option(data-val='Famous Tates' value='Famous Tates') Famous Tates
+        option(data-val='Grand Appliance' value='Grand Appliance') Grand Appliance
+        option(data-val='H20' value='H20') H20
+        option(data-val='Michaels' value='Michaels') Michaels
+        option(data-val='NewEgg' value='NewEgg') NewEgg
+        option(data-val='Orville' value='Orville') Orville
+        option(data-val='PureTalk' value='PureTalk') PureTalk
+        option(data-val='Ring' value='Ring') Ring
+        option(data-val='ShopHQ' value='ShopHQ') ShopHQ
+        option(data-val='Sonic Electronix' value='Sonic Electronix') Sonic Electronix
+        option(data-val='Telrite' value='Telrite') Telrite
+        option(data-val='Texas Appliance' value='Texas Appliance') Texas Appliance
+        option(data-val='West Elm' value='West Elm') West Elm
+
+  .col-5.mx-auto
+    .input-group.mb-3
+      select#anythingelse.form-control(data-show-subtext='true')
+        option(value='') Choose any option
+        option(data-val='reg' value='Register your Warranty/Activate your Plan') Register your Warranty/Activate your Plan
+        option(data-val='plan' value='Purchase a Protection Plan') Purchase a Protection Plan
+        option(data-val='cancle' value='Cancellation') Cancellation
+        option(data-val='anything' value='Anything Else') Anything Else 
+
+  .col-5.mx-auto
+    #inputnum.form-outline.mb-3
+      input#valinput.form-control(type='text' placeholder='Enter Your TC Number')
+
+  .col-5.mx-auto
+    .input-group.mb-3
+      select#items.custom-select(name='items')
+        option(value='') Items Category
+        option(data-val='tv' value='TV') TV
+        option(data-val='lap' value='Laptop') Laptop
+        option(data-val='mob' value='Mobile') Mobile 
+
+  .col-5.mx-auto
+    button#btnid.btn.btn-outline-primary(onclick='getOption()') Check Options
+    button#btnanythingelse.btn.btn-outline-primary(onclick='getOptionanything()') Check Optionss
+
+    script(src="/stylesheets/index.js")

@@ -1,0 +1,67 @@
+body {
+  background-image: url("/images/back.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* For screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: 100% auto; /* Change the background size to cover the full width and auto-adjust the height */
+    background-position: center top; /* Center the background image */
+  }
+}
+
+.header {
+  text-align: center;
+  background-color: #073f54;
+  height: 50px;
+  padding: 10px;
+  color: white;
+  margin-bottom: 50p;
+ 
+}
+
+
+@media only screen and (max-width: 600px) {
+  .header {
+    border: 1px solid red;
+    background-color: black;
+  }
+}
+
+
+#retailers {
+  display: none;
+}
+
+#anythingelse {
+  display: none;
+}
+#inputnum {
+  display: none;
+}
+
+#items {
+  display: none;
+}
+
+#btnid {
+  display: none;
+}
+
+#btnanythingelse {
+  display: none;
+}
+
+
+
+.yes {
+  width: 20%;
+  margin-left: 40%;
+  color: lightblue;
+  font-size: small;
+  }
+
+ 
